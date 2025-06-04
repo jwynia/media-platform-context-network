@@ -1,24 +1,53 @@
-# Analysis Context Network
+# Media Platform Context Network
 
-This project is a specialized template for a context network focused on document, repository, and log analysis (more info about context networks at https://jwynia.github.io/context-networks/). It is designed to support projects where users need to analyze collections of documents, code repositories, log files, or similar sets of materials, and build a structured understanding of these materials using LLM agents.
+This project is a specialized template for creating context networks focused on media platform development and management. It provides a structured framework for planning, developing, and maintaining media platforms while preserving key decisions, design patterns, and organizational knowledge.
 
 ## Purpose
 
-This template provides a specialized structure for:
+This template is designed to support projects where teams need to:
 
-1. **Organizing Source Materials**: Tracking and managing documents, repositories, logs, or datasets that need to be analyzed
-2. **Documenting Analysis Frameworks**: Capturing the methodologies and approaches used to analyze materials
-3. **Recording Analysis Artifacts**: Systematically documenting entities, patterns, and relationships discovered during analysis
-4. **Synthesizing Findings**: Developing coherent insights from analysis results
-5. **Specifying Tool Requirements**: Documenting requirements for tools that can work with the analyzed materials
+1. **Define Platform Strategy**: Document core purpose, content types, distribution methods, and business models
+2. **Plan Platform Architecture**: Capture technical decisions, system design, and integration patterns
+3. **Manage Content Strategy**: Track content types, workflows, and distribution channels
+4. **Document User Experience**: Record user journeys, interface patterns, and engagement models
+5. **Track Business Rules**: Maintain pricing models, access controls, and monetization strategies
 
 The template is particularly useful for:
 
-- Research projects involving document analysis
-- Code repository audits and understanding
-- Log analysis and pattern identification
-- Dataset exploration and insight generation
-- Requirements gathering for tool development based on analysis findings
+- Content publishing platforms
+- Media streaming services
+- Digital learning platforms
+- Community engagement platforms
+- Content marketplace systems
+
+## Getting Started
+
+1. **Initial Setup**:
+   - Clone this template repository
+   - Navigate to the `setup/` directory
+   - Follow the questionnaire in `setup/questionnaire/` to define your platform:
+     - Core purpose and goals (`01_core_purpose.md`)
+     - Content types and formats (`02_content_types.md`)
+     - Distribution methods (`03_distribution.md`)
+     - Target audience (`04_audience.md`)
+     - Business model (`05_business_model.md`)
+
+2. **Choose Platform Template**:
+   Based on your questionnaire answers, select the appropriate template from:
+   - Commercial Platform (`setup/templates/commercial.md`)
+   - Community Platform (`setup/templates/community.md`)
+   - Educational Platform (`setup/templates/educational.md`)
+   - Open Source Platform (`setup/templates/open_source.md`)
+
+3. **Configure Platform**:
+   - Run `setup/scripts/configure.sh` to apply your chosen template
+   - The script will customize the context network based on your questionnaire responses
+   - Review and adjust the generated structure as needed
+
+4. **Begin Documentation**:
+   - Update `foundation/project_definition.md` with your platform specifics
+   - Document your technical architecture in `foundation/structure.md`
+   - Begin tracking decisions in `decisions/`
 
 ## Structure
 
@@ -26,124 +55,125 @@ The context network is organized into specialized sections:
 
 ```
 context-network/
-├── discovery.md                    # Navigation guide with analysis focus
-├── foundation/                     # Core project information
-│   ├── project_definition.md       # Analysis project goals
-│   ├── structure.md                # Project structure overview
-│   ├── principles.md               # Analysis principles and standards
-│   └── analysis_approach.md        # Overall analysis methodology
-├── source_material/                # Information about source materials
-│   ├── inventory.md                # Catalog of all source materials
-│   ├── acquisition.md              # How materials were acquired
-│   └── preprocessing.md            # Any preprocessing applied
-├── analysis/                       # Analysis-specific information
-│   ├── frameworks/                 # Analysis frameworks used
-│   ├── patterns/                   # Identified patterns
-│   ├── entities/                   # Key entities discovered
-│   ├── relationships/              # Relationships between entities
-│   └── findings/                   # Key findings from analysis
-├── processes/                      # Process documentation
-│   ├── ingestion.md                # Source material ingestion process
-│   ├── analysis.md                 # Analysis workflows
-│   ├── validation.md               # Validation procedures
-│   └── synthesis.md                # Synthesizing findings
-├── tools/                          # Tools for analysis
-│   ├── requirements/               # Tool requirements
-│   ├── evaluations/                # Tool evaluations
-│   └── workflows/                  # Tool workflows
-└── [additional standard sections]  # Decisions, connections, meta, etc.
+├── discovery.md                    # Navigation guide for the network
+├── foundation/                     # Core platform information
+│   ├── project_definition.md       # Platform goals and scope
+│   ├── structure.md               # Technical architecture
+│   ├── principles.md              # Platform principles
+│   └── content_strategy.md        # Content approach and standards
+├── elements/                      # Platform components
+│   ├── content_management/        # CMS architecture
+│   ├── user_experience/           # UX patterns
+│   ├── distribution/              # Distribution channels
+│   └── monetization/              # Revenue models
+├── processes/                     # Process documentation
+│   ├── content_workflow.md        # Content lifecycle
+│   ├── moderation.md             # Content moderation
+│   ├── distribution.md           # Publishing process
+│   └── analytics.md              # Performance tracking
+├── decisions/                     # Key decisions
+│   ├── decision_index.md         # Decision log
+│   └── templates/                # Decision templates
+├── connections/                   # Integration points
+│   ├── dependencies.md           # System dependencies
+│   └── interfaces.md             # API specifications
+├── planning/                      # Development planning
+│   ├── roadmap.md               # Feature roadmap
+│   └── milestones.md            # Release planning
+└── meta/                         # Network maintenance
+    ├── updates.md               # Change log
+    └── maintenance.md           # Maintenance procedures
 ```
-
-## Getting Started
-
-1. **Set Up Your Environment**:
-   - Clone this template repository
-   - Ensure you have an LLM agent with file access (see Tools section below)
-   - Configure your agent with context network instructions
-
-2. **Define Your Analysis Project**:
-   - Update `foundation/project_definition.md` with your specific analysis goals
-   - Document your analysis approach in `foundation/analysis_approach.md`
-
-3. **Begin Source Material Management**:
-   - Document your source materials in `source_material/inventory.md`
-   - Record acquisition details in `source_material/acquisition.md`
-   - Document any preprocessing in `source_material/preprocessing.md`
-
-4. **Start Analysis**:
-   - Follow the process in `processes/analysis.md`
-   - Use the templates in `analysis/` directories to document your findings
-   - Synthesize insights following `processes/synthesis.md`
-
-5. **Develop Tool Requirements**:
-   - Document tool requirements in `tools/requirements/` based on your analysis
-
-## Analysis Workflow
-
-The typical workflow for an analysis project using this template:
-
-1. **Acquisition**: Identify and acquire source materials
-2. **Ingestion**: Document and preprocess materials
-3. **Framework Selection**: Choose appropriate analysis frameworks
-4. **Analysis**: Identify entities, patterns, and relationships
-5. **Synthesis**: Develop findings and insights
-6. **Tool Requirements**: Specify requirements for tools based on analysis
-
-## Tools
-
-Context networks are intended to be used with an LLM agent that has file access to all of the files in the project folder.
-
-Recommended tools include:
-
-- **Cursor** (https://www.cursor.com/): All-in-one IDE with LLM chat and file access
-- **VSCode** (https://code.visualstudio.com/) with **Cline** (https://cline.bot/): Code editor with agent capabilities
-- **OpenRouter** (https://openrouter.ai/): Access to various LLM models
 
 ## Best Practices
 
 ### Classification System
 
-This template includes an enhanced classification system specifically for analysis projects:
+Use this classification system for media platform components:
 
-1. **Domain**: Primary knowledge area (Source Material, Analysis Framework, Pattern, Entity, Relationship, Finding, Tool)
-2. **Source Type**: Type of source material (Document, Repository, Log, Dataset, Mixed)
-3. **Analysis Stage**: Stage in the analysis process (Raw, Processed, Analyzed, Synthesized)
-4. **Stability**: Change frequency expectation (Static, Semi-stable, Dynamic)
-5. **Abstraction**: Detail level (Conceptual, Structural, Detailed)
-6. **Confidence**: Information reliability (Established, Evolving, Speculative)
-7. **Relevance**: Importance to analysis goals (Critical, High, Medium, Low)
+1. **Domain**: Primary function area
+   - Content Management
+   - User Experience
+   - Distribution
+   - Analytics
+   - Monetization
+
+2. **Component Type**: Technical classification
+   - Frontend
+   - Backend
+   - Infrastructure
+   - Integration
+   - Business Logic
+
+3. **User Impact**: Effect on platform users
+   - Direct (user-facing)
+   - Indirect (system-level)
+   - Hybrid
+
+4. **Development Stage**: Implementation status
+   - Planned
+   - In Development
+   - Live
+   - Deprecated
 
 ### Relationship Types
 
-The template includes specialized relationship types for analysis:
+Use these specialized relationship types for media platforms:
 
-1. **Analysis Relationships**:
-   - `extracted-from`: Information extracted from source
-   - `supports`: Evidence supporting a finding
-   - `contradicts`: Evidence contradicting a finding
-   - `correlates-with`: Statistical correlation
-   - `causes`: Causal relationship
-   - `instance-of`: Example of a pattern
+1. **Content Relationships**:
+   - `produces`: Content creation flow
+   - `consumes`: Content consumption pattern
+   - `transforms`: Content modification
+   - `distributes`: Distribution channel
 
-2. **Source Material Relationships**:
-   - `version-of`: Different versions of same material
-   - `derived-from`: Processed form of source
-   - `references`: References another source
-   - `contains`: Contains another source
+2. **System Relationships**:
+   - `depends-on`: System dependency
+   - `integrates-with`: External integration
+   - `extends`: Feature extension
+   - `impacts`: Performance impact
 
-### Plan/Act and Specific Scope
+3. **User Relationships**:
+   - `interacts-with`: User touchpoint
+   - `subscribes-to`: Subscription model
+   - `moderates`: Content control
+   - `analyzes`: Analytics tracking
 
-Use Plan mode aggressively to develop a clear analysis strategy before taking action. Break down complex analysis tasks into specific, manageable steps.
+### Documentation Guidelines
 
-### Monitor and Validate
+1. **Content Strategy**:
+   - Document content types and formats
+   - Define metadata requirements
+   - Specify validation rules
+   - Outline workflow states
 
-Regularly review analysis artifacts for accuracy and completeness. Validate findings against source materials and document confidence levels appropriately.
+2. **Technical Architecture**:
+   - Use diagrams for system components
+   - Document API specifications
+   - Define data models
+   - Specify performance requirements
 
-### Retrospective
+3. **User Experience**:
+   - Include user journey maps
+   - Document interaction patterns
+   - Define accessibility requirements
+   - Specify responsive behaviors
 
-Periodically review your analysis process and findings to identify improvements. Update the context network with lessons learned and refinements to your approach.
+4. **Business Rules**:
+   - Document pricing models
+   - Specify access controls
+   - Define monetization strategies
+   - Outline compliance requirements
+
+## Tools
+
+Context networks are designed to work with LLM agents that have file access. Recommended tools:
+
+- **Cursor** (https://www.cursor.com/): IDE with integrated LLM capabilities
+- **VSCode** with **Cline** (https://cline.bot/): Code editor with agent support
+- **OpenRouter** (https://openrouter.ai/): Access to various LLM models
 
 ## Additional Resources
 
 - Context Networks Guide: https://jwynia.github.io/context-networks/
-- Custom Instructions: See `/inbox/custom-instructions-prompt.md` for agent configuration
+- Custom Instructions: See `/inbox/custom-instructions-prompt.md`
+- Setup Guide: See `/setup/README.md`

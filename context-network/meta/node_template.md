@@ -5,6 +5,7 @@
 
 ## Classification
 - **Domain:** [Primary knowledge area - examples based on project type:
+  - Media Platform: Content, Audience, Distribution, Analytics, etc.
   - Software: Frontend, Backend, DevOps, etc.
   - Research: Methodology, Analysis, Literature, etc.
   - Creative: Character, Setting, Plot, etc.
@@ -35,11 +36,19 @@
 
 <!-- Common relationship types by project category:
   - General: depends-on, implements, extends, contradicts, complements
+  - Media Platform: generates-content-for, distributes-through, engages-with, monetizes-via, measures-through
   - Software: calls, imports, configures, tests
   - Research: cites, builds-upon, questions, supports
   - Creative: character-in, setting-for, theme-of, inspired-by
   - Knowledge Base: explains, exemplifies, categorizes, compares
   - Career: requires, leads-to, enhances, demonstrates
+
+  Media Platform Examples:
+  - Content Strategy - generates-content-for -> Distribution Channel
+  - Content Type - distributes-through -> Platform
+  - Content - engages-with -> Audience Segment
+  - Premium Content - monetizes-via -> Subscription Model
+  - User Behavior - measures-through -> Analytics Framework
 -->
 
 ## Navigation Guidance
